@@ -53,4 +53,14 @@ public class Person {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "Person " +
+                "Id = " + id +
+                ", Name = '" + name + '\'' +
+                ", Email = '" + email + '\'' +
+                ", Password = '" + password + '\'' +
+                '}';
+    }
 }

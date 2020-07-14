@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application {
+public class Principal extends Application {
     private static Stage stage; // Carrega a janela1;
 
     @Override
@@ -16,7 +16,7 @@ public class Main extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/Principal.fxml")); // Carrega o FXML
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
-            stage.setTitle("Login");
+            stage.setTitle("Principal");
             stage.setScene(scene); // Coloca a cena em uma janela
             stage.show();  // Carrega a janela2
             setStage(stage);
@@ -35,6 +35,6 @@ public class Main extends Application {
     }
 
     public static void setStage(Stage stage){
-        Main.stage = stage;
+        Principal.stage = stage;
     }
 }

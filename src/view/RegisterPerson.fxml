@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterPersonController">
+    <children>
+        <Label layoutX="36.0" layoutY="61.0" text="Name">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="36.0" layoutY="99.0" text="Email">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="37.0" layoutY="141.0" text="Password">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txName" layoutX="110.0" layoutY="56.0" prefHeight="25.0" prefWidth="275.0" promptText="Enter name ..." />
+        <TextField fx:id="txEmail" layoutX="110.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" promptText="Enter Email ..." />
+        <PasswordField fx:id="psPassword" layoutX="110.0" layoutY="136.0" prefHeight="25.0" prefWidth="275.0" promptText="Enter password ..." />
+        <Button fx:id="btRegister" layoutX="147.0" layoutY="183.0" mnemonicParsing="false" text="Register" />
+        <Button fx:id="btCancel" layoutX="273.0" layoutY="183.0" mnemonicParsing="false" text="Cancel" />
+    </children>
+</AnchorPane>
+

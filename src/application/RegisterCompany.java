@@ -8,15 +8,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application {
+public class RegisterCompany extends Application {
     private static Stage stage; // Carrega a janela1;
 
     @Override
     public void start(Stage stage){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/Principal.fxml")); // Carrega o FXML
+            Parent root = FXMLLoader.load(getClass().getResource("/view/RegisterCompany.fxml")); // Carrega o FXML
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
-            stage.setTitle("Login");
+            stage.setTitle("Register Company");
             stage.setScene(scene); // Coloca a cena em uma janela
             stage.show();  // Carrega a janela2
             setStage(stage);
@@ -35,6 +35,6 @@ public class Main extends Application {
     }
 
     public static void setStage(Stage stage){
-        Main.stage = stage;
+        RegisterCompany.stage = stage;
     }
 }

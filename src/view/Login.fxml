@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -11,9 +13,75 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginController">
    <children>
-      <TextField fx:id="txEmail" layoutX="48.0" layoutY="90.0" promptText="Email" />
-      <PasswordField fx:id="txPassword" layoutX="48.0" layoutY="131.0" promptText="Password" />
-      <Button fx:id="btClose" layoutX="48.0" layoutY="168.0" mnemonicParsing="false" text="Close" textFill="#09d3e5" />
-      <Button fx:id="btEnter" layoutX="157.0" layoutY="168.0" mnemonicParsing="false" text="Enter" textFill="#01e2ee" />
+      <TextField fx:id="txEmail" layoutX="48.0" layoutY="90.0" promptText="Email">
+         <effect>
+            <Lighting diffuseConstant="1.71" specularConstant="0.2" specularExponent="14.76" surfaceScale="0.79">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#fffefe" />
+               </light>
+            </Lighting>
+         </effect></TextField>
+      <PasswordField fx:id="txPassword" layoutX="48.0" layoutY="131.0" promptText="Password">
+         <effect>
+            <Lighting diffuseConstant="1.71">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></PasswordField>
+      <Button fx:id="btClose" layoutX="48.0" layoutY="168.0" mnemonicParsing="false" text="Cancel" textFill="#210300">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.66" specularConstant="0.28" specularExponent="21.43" surfaceScale="0.36">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#30dd38" />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <Button fx:id="btEnter" layoutX="157.0" layoutY="168.0" mnemonicParsing="false" text="Log in" textFill="#210300">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.83" specularConstant="0.28" specularExponent="40.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#30dd38" />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <Label layoutX="49.0" layoutY="206.0" text="Forgot your password?">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="227.0" text="Click here">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
    </children>
+   <effect>
+      <Lighting diffuseConstant="0.79" specularConstant="0.28" specularExponent="2.85" surfaceScale="2.45">
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant azimuth="293.57" color="#9df8b3" elevation="70.71" />
+         </light>
+      </Lighting>
+   </effect>
 </AnchorPane>
