@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginController">
+   <children>
+      <TextField fx:id="txEmail" layoutX="48.0" layoutY="90.0" promptText="Email" />
+      <PasswordField fx:id="txPassword" layoutX="48.0" layoutY="131.0" promptText="Password" />
+      <Button fx:id="btClose" layoutX="48.0" layoutY="168.0" mnemonicParsing="false" text="Close" textFill="#09d3e5" />
+      <Button fx:id="btEnter" layoutX="157.0" layoutY="168.0" mnemonicParsing="false" text="Enter" textFill="#01e2ee" />
+   </children>
+</AnchorPane>
