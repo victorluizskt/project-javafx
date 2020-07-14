@@ -14,7 +14,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/Principal.fxml")); // Carrega o FXML
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml")); // Carrega o FXML
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
             stage.setTitle("Login");
             stage.setScene(scene); // Coloca a cena em uma janela
@@ -24,7 +24,6 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
 
     public static void main(String[] args) {
         launch(args);
