@@ -19,40 +19,40 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     @FXML
-    private PasswordField txPassword;
+    private TextField txtUser;
 
     @FXML
-    private Button btClose;
+    private PasswordField txtPassword;
 
     @FXML
-    private Button btEnter;
+    private Button btnLogin;
 
     @FXML
-    private TextField txEmail;
+    private Button btnExit;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btEnter.setOnMouseClicked((MouseEvent e) ->{
+        btnLogin.setOnMouseClicked((MouseEvent e) ->{
            logIn();
         });
 
-        btEnter.setOnKeyPressed((KeyEvent e) ->{
+        btnLogin.setOnKeyPressed((KeyEvent e) ->{
             if(e.getCode() == KeyCode.ENTER){
                 logIn();
             }
         });
 
-        btClose.setOnMouseClicked((MouseEvent e) ->{
+        btnExit.setOnMouseClicked((MouseEvent e) ->{
             closeBtAction();
         });
 
-        btClose.setOnKeyPressed((KeyEvent e) -> {
+        btnExit.setOnKeyPressed((KeyEvent e) -> {
             if(e.getCode() == KeyCode.ENTER){
                 closeBtAction();
             }
         });
 
-        txPassword.setOnKeyPressed((KeyEvent e) ->{
+        txtPassword.setOnKeyPressed((KeyEvent e) ->{
             if(e.getCode() == KeyCode.ENTER){
                 logIn();
             }
@@ -64,7 +64,7 @@ public class LoginController implements Initializable {
     }
 
     public void logIn(){
-        if(txEmail.getText().equals("root") && txPassword.getText().equals("1234")){
+        if(txtUser.getText().equals("root") && txtPassword.getText().equals("1234")){
             Principal p = new Principal();
             closeBtAction();
             try {
@@ -76,7 +76,7 @@ public class LoginController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Error");
             alert.setTitle("Error");
-            alert.setContentText("Email or Password invalid.");
+            alert.setContentText("Email or password invalid.");
             alert.show();
         }
     }

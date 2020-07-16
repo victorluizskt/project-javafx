@@ -18,6 +18,7 @@ public class RegisterCompany extends Application {
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
             stage.setTitle("Register Company");
             stage.setScene(scene); // Coloca a cena em uma janela
+            stage.setResizable(false);
             stage.show();  // Carrega a janela2
             setStage(stage);
         } catch(IOException e){

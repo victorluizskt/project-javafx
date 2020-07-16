@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class Main extends Application {
@@ -18,6 +17,7 @@ public class Main extends Application {
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
             stage.setTitle("Login");
             stage.setScene(scene); // Coloca a cena em uma janela
+            stage.setResizable(false);
             stage.show();  // Carrega a janela2
             setStage(stage);
         } catch(IOException e){

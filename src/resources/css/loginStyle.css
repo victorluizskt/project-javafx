@@ -1,0 +1,15 @@
+#btnLogin {
+    -fx-background-color: #1b5e20;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+}
+
+#btnExit {
+    -fx-background-color: #b71c1c;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-background-radius: 10;
+}

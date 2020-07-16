@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -7,19 +8,45 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterCompanyController">
     <children>
-        <Label layoutX="36.0" layoutY="61.0" text="Name">
+        <Label layoutX="36.0" layoutY="61.0" text="Nome">
             <font>
-                <Font name="System Bold" size="13.0" />
+                <Font name="Manjari Bold" size="16.0" />
             </font>
         </Label>
         <Label layoutX="36.0" layoutY="99.0" text="CNPJ">
             <font>
-                <Font name="System Bold" size="13.0" />
+                <Font name="Manjari Bold" size="16.0" />
             </font>
         </Label>
-        <TextField fx:id="txName" layoutX="110.0" layoutY="56.0" prefHeight="25.0" prefWidth="275.0" promptText="Enter name ..." />
-        <TextField fx:id="txEmail" layoutX="110.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" promptText="Enter CNPJ ..." />
-        <Button fx:id="btRegister" layoutX="138.0" layoutY="137.0" mnemonicParsing="false" text="Register" />
-        <Button fx:id="btCancel" layoutX="248.0" layoutY="137.0" mnemonicParsing="false" text="Cancel" />
+        <TextField fx:id="txName" layoutX="110.0" layoutY="56.0" prefHeight="25.0" prefWidth="275.0" promptText="Insira o nome da empresa" />
+        <TextField fx:id="txCNPJ" layoutX="110.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" promptText="Insira o cnpj da empresa" />
+        <Button fx:id="btRegister" layoutX="138.0" layoutY="137.0" mnemonicParsing="false" text="Registrar">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="AQUA" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></Button>
+        <Button fx:id="btCancel" layoutX="248.0" layoutY="137.0" mnemonicParsing="false" text="Cancelar">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="RED" />
+               </light>
+            </Lighting>
+         </effect></Button>
     </children>
 </AnchorPane>

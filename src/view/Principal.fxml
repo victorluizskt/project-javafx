@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
    <children>
-      <Button fx:id="btCadrasctPerson" layoutX="52.0" layoutY="42.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="198.0" text="Cadrasct Person" />
-      <Button fx:id="btRegisterCompany" layoutX="334.0" layoutY="42.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="198.0" text="Register Company" />
-      <Button fx:id="btListPerson" layoutX="52.0" layoutY="200.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="198.0" text="List Person" />
-      <Button fx:id="btListCompany" layoutX="334.0" layoutY="200.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="198.0" text="List Company" />
+      <AnchorPane prefHeight="400.0" prefWidth="193.0">
+         <children>
+            <Button fx:id="btCadrasctPerson" mnemonicParsing="false" prefHeight="104.0" prefWidth="195.0" text="      Register Person">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btRegisterCompany" layoutY="104.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="195.0" text="          Register Company">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btListPerson" layoutY="200.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="195.0" text=" List Person's">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btListCompany" layoutY="304.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="195.0" text="      List Company's">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <AnchorPane prefHeight="400.0" prefWidth="54.0" style="-fx-background-color: #a9aaab;">
+               <effect>
+                  <DropShadow color="#a9aaab" />
+               </effect>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="193.0" prefHeight="400.0" prefWidth="407.0">
+         <children>
+            <ImageView fitHeight="249.0" fitWidth="275.0" layoutX="70.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/image/ManaLight.png" />
+               </image></ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Java FXML" level="project" />
     <orderEntry type="library" name="mysql-connector-java_8.0.20-1ubuntu18" level="project" />
+    <orderEntry type="library" name="JavaFoeniX" level="project" />
   </component>
 </module>

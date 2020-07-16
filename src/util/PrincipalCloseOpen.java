@@ -13,7 +13,6 @@ public class PrincipalCloseOpen {
     public static void openMain(){
         Principal principal = new Principal();
         try {
-            closed();
             principal.start(new Stage());
         } catch(Exception ex){
             ex.printStackTrace();
