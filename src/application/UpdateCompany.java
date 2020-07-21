@@ -1,16 +1,17 @@
 package application;
 
+import view.UpdateCompanyController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Company;
-import controllers.UpdateCompanyController;
 
 import java.io.IOException;
 
-public class UpdateCompany extends Application {
+public class UpdateCompany  extends Application {
+
     private static Stage stage; // Carrega a janela1;
 
     public UpdateCompany(Company company){
@@ -22,7 +23,7 @@ public class UpdateCompany extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/UpdateCompany.fxml")); // Carrega o FXML
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
-            stage.setTitle("Update Company");
+            stage.setTitle("Update Person");
             stage.setScene(scene); // Coloca a cena em uma janela
             stage.setResizable(false);
             stage.show();  // Carrega a janela2

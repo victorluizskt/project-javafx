@@ -5,31 +5,68 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListedPersonController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="803.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListedPersonController">
    <children>
-      <TableView fx:id="table" prefHeight="340.0" prefWidth="489.0">
+      <TableView fx:id="table" prefHeight="340.0" prefWidth="489.0" style="-fx-background-color: #b3b3b3;">
         <columns>
-          <TableColumn fx:id="clmId" prefWidth="88.0" text="ID" />
-          <TableColumn fx:id="clmName" prefWidth="194.0" text="Nome" />
-            <TableColumn fx:id="clmEmail" prefWidth="206.0" text="Email" />
+          <TableColumn fx:id="clmId" prefWidth="88.0" style="-fx-background-color: #02bfd4;" text="ID" />
+          <TableColumn fx:id="clmName" prefWidth="194.0" style="-fx-background-color: #02bfd4;" text="Nome" />
+            <TableColumn fx:id="clmEmail" prefWidth="206.0" style="-fx-background-color: #02bfd4;" text="Email" />
         </columns>
       </TableView>
-      <Button fx:id="btnDel" layoutX="14.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Deletar" />
-      <Button fx:id="btnUpdate" layoutX="101.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #00FF00;" text="Atualizar" />
-      <Button fx:id="btnSair" layoutX="194.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Sair" />
-      <ImageView fx:id="imgView" fitHeight="141.0" fitWidth="173.0" layoutX="502.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="503.0" layoutY="200.0" text="ID:" />
-      <Label fx:id="lbId" layoutX="532.0" layoutY="202.0" prefHeight="16.0" prefWidth="44.0" />
-      <Label layoutX="501.0" layoutY="222.0" text="Nome:" />
-      <Label fx:id="lbNome" layoutX="555.0" layoutY="222.0" prefHeight="16.0" prefWidth="130.0" />
-      <Label layoutX="501.0" layoutY="241.0" text="Email:" />
-      <Label fx:id="lbEmail" layoutX="556.0" layoutY="241.0" prefHeight="16.0" prefWidth="113.0" />
-      <Button fx:id="btUpdate" layoutX="519.0" layoutY="265.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Update Information" />
-      <Button fx:id="btcGeradorPdf" layoutX="520.0" layoutY="307.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" text="Gerar PDF" />
-      <TextField fx:id="textSearch" layoutX="499.0" layoutY="14.0" prefHeight="26.0" prefWidth="153.0" />
-      <Button fx:id="btnSearch" layoutX="649.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="41.0" text="Ok" />
+      <Button fx:id="btnDel" layoutX="103.0" layoutY="363.0" mnemonicParsing="false" style="-fx-background-color: #b01911;" text="Deletar" underline="true">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnUpdate" layoutX="14.0" layoutY="363.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Update " underline="true">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnSair" layoutX="719.0" layoutY="376.0" mnemonicParsing="false" style="-fx-background-color: #b01911;" text="Close" underline="true" />
+      <ImageView fx:id="imgView" fitHeight="141.0" fitWidth="173.0" layoutX="566.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="501.0" layoutY="205.0" text="ID:">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbId" layoutX="529.0" layoutY="205.0" prefHeight="16.0" prefWidth="44.0">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="501.0" layoutY="242.0" text="Nome:">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbNome" layoutX="554.0" layoutY="242.0" prefHeight="29.0" prefWidth="243.0">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="501.0" layoutY="277.0" text="Email:">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbEmail" layoutX="552.0" layoutY="279.0" prefHeight="16.0" prefWidth="237.0">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Button fx:id="btUpdate" layoutX="526.0" layoutY="318.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: #02bfd4;" text="Update Information" underline="true">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btcGeradorPdf" layoutX="526.0" layoutY="360.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" style="-fx-background-color: #f5d02a;" text="Generate Pdf" underline="true">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></Button>
+      <TextField fx:id="textSearch" layoutX="576.0" layoutY="13.0" prefHeight="26.0" prefWidth="153.0" promptText="Search ..." />
+      <Button fx:id="btnSearch" layoutX="726.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: #02bfd4;" text="Ok" />
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="541.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/search.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

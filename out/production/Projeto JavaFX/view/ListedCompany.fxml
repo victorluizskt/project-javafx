@@ -5,31 +5,56 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="717.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListedCompanyController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="803.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListedCompanyController">
    <children>
       <TableView fx:id="table" prefHeight="340.0" prefWidth="489.0" style="-fx-background-color: #87CEFA;">
         <columns>
-          <TableColumn fx:id="clmId" prefWidth="88.0" style="-fx-background-color: #7B68EE;" text="ID" />
-          <TableColumn fx:id="clmName" prefWidth="194.0" style="-fx-background-color: #7B68EE;" text="Nome" />
-            <TableColumn fx:id="clmCNPJ" prefWidth="206.0" style="-fx-background-color: #7B68EE;" text="CNPJ" />
+          <TableColumn fx:id="clmId" prefWidth="88.0" style="-fx-background-color: #02bfd4;" text="ID" />
+          <TableColumn fx:id="clmName" prefWidth="194.0" style="-fx-background-color: #02bfd4;" text="Name" />
+            <TableColumn fx:id="clmCNPJ" prefWidth="206.0" style="-fx-background-color: #02bfd4;" text="CNPJ" />
         </columns>
       </TableView>
-      <Button fx:id="btnDel" layoutX="14.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Deletar" />
-      <Button fx:id="btnUpdate" layoutX="101.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #00FF00;" text="Atualizar" />
-      <Button fx:id="btnSair" layoutX="195.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Sair" />
-      <ImageView fx:id="imgView" fitHeight="141.0" fitWidth="173.0" layoutX="505.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="lbId" layoutX="495.0" layoutY="211.0" text="ID:" />
-      <Label fx:id="lbId" layoutX="524.0" layoutY="213.0" prefHeight="16.0" prefWidth="44.0" />
-      <Label fx:id="lbNome" layoutX="495.0" layoutY="229.0" text="Nome:" />
-      <Label fx:id="lbNome" layoutX="549.0" layoutY="229.0" prefHeight="16.0" prefWidth="130.0" />
-      <Label fx:id="lbCNPJ" layoutX="495.0" layoutY="252.0" text="CNPJ" />
-      <Label fx:id="lbEmail" layoutX="550.0" layoutY="252.0" prefHeight="16.0" prefWidth="113.0" />
-      <Button fx:id="btnAlterar" layoutX="518.0" layoutY="276.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #B22222;" text="Alterar" />
-      <Button fx:id="btnGeradorCpf" layoutX="518.0" layoutY="314.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Gerar PDF" />
-      <TextField fx:id="textSearch" layoutX="493.0" layoutY="21.0" />
-      <Button fx:id="btnSearch" layoutX="664.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="43.0" text="Ok" />
+      <Button fx:id="btnDel" layoutX="105.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Deletar" />
+      <Button fx:id="btnUpdate" layoutX="14.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Update" />
+      <Button fx:id="btnSair" layoutX="708.0" layoutY="382.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Close" />
+      <ImageView fx:id="imgView" fitHeight="141.0" fitWidth="173.0" layoutX="557.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lbId" layoutX="503.0" layoutY="205.0" text="ID:">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbId" layoutX="526.0" layoutY="202.0" prefHeight="16.0" prefWidth="44.0">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbNome" layoutX="504.0" layoutY="231.0" text="Name:">
+         <font>
+            <Font name="Manjari Bold" size="19.0" />
+         </font></Label>
+      <Label fx:id="lbNome" layoutX="564.0" layoutY="233.0" prefHeight="29.0" prefWidth="205.0">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="501.0" layoutY="263.0" text="CNPJ:">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbCNPJ" layoutX="552.0" layoutY="263.0" prefHeight="29.0" prefWidth="229.0">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font></Label>
+      <Button fx:id="btnAlterar" layoutX="568.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #02bfd4;" text="Update" />
+      <Button fx:id="btnGeradorCpf" layoutX="568.0" layoutY="337.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #f5d02a;" text="Gerar PDF" />
+      <TextField fx:id="textSearch" layoutX="558.0" layoutY="21.0" promptText="Search" />
+      <Button fx:id="btnSearch" layoutX="727.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="43.0" style="-fx-background-color: #02bfd4;" text="Ok" />
+      <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="530.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/search.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

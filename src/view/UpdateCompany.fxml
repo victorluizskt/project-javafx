@@ -8,42 +8,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateCompanyController">
-    <children>
-        <Label layoutX="36.0" layoutY="196.0" text="Nome">
-            <font>
-                <Font name="Manjari Bold" size="16.0" />
-            </font>
-        </Label>
-        <Label layoutX="36.0" layoutY="234.0" text="CNPJ">
-            <font>
-                <Font name="Manjari Bold" size="16.0" />
-            </font>
-        </Label>
-        <TextField fx:id="txName" layoutX="110.0" layoutY="191.0" prefHeight="25.0" prefWidth="275.0" promptText="Insira o nome da empresa" />
-        <TextField fx:id="txCNPJ" layoutX="110.0" layoutY="229.0" prefHeight="25.0" prefWidth="275.0" promptText="Insira o cnpj da empresa" />
-        <Button fx:id="btUpdate" layoutX="138.0" layoutY="272.0" mnemonicParsing="false" style="-fx-background-color: #B0E0E6;" text="Atualizar">
-         <font>
-            <Font name="Manjari Bold" size="13.0" />
-         </font></Button>
-        <Button fx:id="btCancel" layoutX="248.0" layoutY="272.0" mnemonicParsing="false" style="-fx-background-color: #B22222;" text="Cancelar">
-         <font>
-            <Font name="Manjari Bold" size="13.0" />
-         </font></Button>
-      <ImageView fx:id="imgPhoto" fitHeight="94.0" fitWidth="122.0" layoutX="157.0" layoutY="30.0" pickOnBounds="true">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="491.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.UpdateCompanyController">
+   <children>
+      <ImageView fx:id="imgPhoto" fitHeight="150.0" fitWidth="200.0" layoutX="171.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image backgroundLoading="true" url="/resources/image/boneco.png" />
+            <Image url="@../resources/image/company.png" />
          </image>
       </ImageView>
-      <Label layoutX="38.0" layoutY="163.0" text="ID">
+      <ImageView fitHeight="38.0" fitWidth="39.0" layoutX="274.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/sinalMais.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btUpdate" layoutX="162.0" layoutY="292.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Update" />
+      <Button fx:id="btCancel" layoutX="274.0" layoutY="292.0" mnemonicParsing="false" style="-fx-background-color: #cc1703;" text="Cancel" />
+      <TextField fx:id="txName" layoutX="150.0" layoutY="210.0" prefHeight="26.0" prefWidth="223.0" />
+      <TextField fx:id="txCNPJ" layoutX="150.0" layoutY="246.0" prefHeight="26.0" prefWidth="223.0" />
+      <Label layoutX="96.0" layoutY="209.0" text="Name">
          <font>
-            <Font name="Manjari Bold" size="16.0" />
+            <Font name="Manjari Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lbId" layoutX="110.0" layoutY="163.0" prefHeight="26.0" prefWidth="41.0">
+      <Label layoutX="95.0" layoutY="245.0" text="CNPJ">
          <font>
-            <Font name="Manjari Bold" size="16.0" />
+            <Font name="Manjari Bold" size="18.0" />
          </font>
       </Label>
-    </children>
+      <Label layoutX="97.0" layoutY="177.0" text="ID">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbId" layoutX="150.0" layoutY="176.0" prefHeight="29.0" prefWidth="38.0">
+         <font>
+            <Font name="Manjari Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

@@ -1,4 +1,4 @@
-package controllers;
+package view;
 
 import application.UpdateCompany;
 import dao.CompanyDao;
@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.Company;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -40,7 +41,6 @@ public class UpdateCompanyController implements Initializable {
 
     @FXML
     private Label lbId;
-
 
     private String pictureUrl;
 

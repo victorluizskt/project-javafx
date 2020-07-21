@@ -1,7 +1,6 @@
 package controllers;
 
 import application.RegisterCompany;
-import com.sun.glass.ui.CommonDialogs;
 import dao.CompanyDao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,7 +17,7 @@ import javafx.stage.Stage;
 import jdbc.DbException;
 import model.Company;
 import util.validatcnpj.validatcnpj;
-import util.PrincipalCloseOpen;
+import util.refator.Navigator;
 
 import java.io.File;
 import java.io.IOException;
@@ -53,7 +52,7 @@ public class RegisterCompanyController implements Initializable {
         btCancel.setOnKeyPressed((KeyEvent e) -> {
             if(e.getCode() == KeyCode.ENTER){
                 closed();
-                PrincipalCloseOpen.openMain();
+                Navigator.openMain();
             }
         });
 
@@ -92,23 +91,32 @@ public class RegisterCompanyController implements Initializable {
     public void registerCompany(){
         String nome = txName.getText();
         String cnpj = txCNPJ.getText();
-        if(cnpjValidate(cnpj) && nome != null){
-            try {
-                Company com = new Company(nome, cnpj, pictureUrl);
-                CompanyDao comDao = new CompanyDao();
-                comDao.insertCompany(com);
-                Alert al = new Alert(Alert.AlertType.CONFIRMATION);
-                al.setHeaderText("Empresa cadastrada.");
-                closed();
-                al.showAndWait();
-            } catch(IOException | DbException e){
-                e.printStackTrace();
+        if(checkInfos(nome, cnpj, pictureUrl)) {
+            if (cnpjValidate(cnpj)) {
+                try {
+                    Company com = new Company(nome, cnpj, pictureUrl);
+                    CompanyDao comDao = new CompanyDao();
+                    comDao.insertCompany(com);
+                    Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+                    al.setHeaderText("Empresa cadastrada.");
+                    closed();
+                    al.showAndWait();
+                } catch (IOException | DbException e) {
+                    e.printStackTrace();
+                }
             }
-
+        } else {
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setHeaderText("Blank fields");
+            al.showAndWait();
         }
     }
 
-    public void selectedPhoto(){  // Adicionar caminho para imagens e filtrar apenas a extensão. * significa qualquer arquivo.
+    private boolean checkInfos(String name, String cnpj, String photoUrl){
+        return name.length() > 4 && cnpj.length() > 10 && photoUrl.length() > 2;
+    }
+
+    public void selectedPhoto() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imagens", "*.jpg", "*.png", "*.jpeg"));
         File file = fileChooser.showOpenDialog(new Stage());
@@ -117,4 +125,5 @@ public class RegisterCompanyController implements Initializable {
             pictureUrl = file.getAbsolutePath();
         }
     }
+
 }

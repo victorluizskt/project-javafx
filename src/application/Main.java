@@ -16,7 +16,7 @@ public class Main extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml")); // Carrega o FXML
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
             stage.setTitle("Login");
-            stage.setScene(scene); // Coloca a cena em uma janela
+            stage.setScene(scene); // Coloca a cena emro uma janela
             stage.setResizable(false);
             stage.show();  // Carrega a janela2
             setStage(stage);

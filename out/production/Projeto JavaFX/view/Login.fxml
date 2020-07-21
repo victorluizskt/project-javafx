@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="681.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="800.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <AnchorPane layoutX="142.0" layoutY="171.0" prefHeight="193.0" prefWidth="397.0" style="-fx-background-color: #9dd9e8;">
+      <AnchorPane layoutX="202.0" layoutY="180.0" prefHeight="193.0" prefWidth="397.0" style="-fx-background-color: #9dd9e8;">
          <children>
             <TextField fx:id="txtUser" layoutX="106.0" layoutY="37.0" prefHeight="32.0" prefWidth="193.0" promptText="Username" style="-fx-background-color: #ffffff;">
                <font>
@@ -51,7 +51,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="166.0" fitWidth="355.0" layoutX="180.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="166.0" fitWidth="355.0" layoutX="239.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/image/Pessoas.png" />
          </image>

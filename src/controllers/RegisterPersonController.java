@@ -17,7 +17,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import jdbc.DbException;
 import model.Person;
-import util.PrincipalCloseOpen;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,7 +46,7 @@ public class RegisterPersonController implements Initializable {
     @FXML
     private ImageView imgPhoto;
 
-    private String pictureUrl;
+    public static String pictureUrl;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -85,30 +84,40 @@ public class RegisterPersonController implements Initializable {
         String email = txEmail.getText();
         String password = psPassword.getText();
         String confPs = psPasswordConfirm.getText();
-        if(password.equals(confPs)){
-            try {
-                Person person = new Person(nome, email, password, pictureUrl);
-                PersonDao dao = new PersonDao();
-                dao.insert(person);
-                Alert al = new Alert(Alert.AlertType.CONFIRMATION);
-                al.setHeaderText("Usuário cadastrado.");
-                closed();
-                al.showAndWait();
-            } catch(IOException | DbException e){
+        if(validateInfos(nome, email, password, confPs)){
+            if(password.equals(confPs)) {
+                try {
+                    Person person = new Person(nome, email, password, pictureUrl);
+                    PersonDao dao = new PersonDao();
+                    dao.insert(person);
+                    Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+                    al.setHeaderText("Usuário cadastrado.");
+                    closed();
+                    al.showAndWait();
+                } catch (IOException | DbException e) {
+                    Alert al = new Alert(Alert.AlertType.ERROR);
+                    al.setHeaderText("Usuário não cadastrado.");
+                    al.showAndWait();
+                    e.printStackTrace();
+                }
+            } else {
                 Alert al = new Alert(Alert.AlertType.ERROR);
-                al.setHeaderText("Usuário não cadastrado.");
+                al.setHeaderText("Different passwords.");
                 al.showAndWait();
-                e.printStackTrace();
             }
-
         } else {
             Alert al = new Alert(Alert.AlertType.ERROR);
-            al.setHeaderText("Senhas diferentes.");
+            al.setHeaderText("Blank fields");
             al.showAndWait();
         }
     }
 
-    public void selectedPhoto(){  // Adicionar caminho para imagens e filtrar apenas a extensão. * significa qualquer arquivo.
+
+    private boolean validateInfos(String name, String email, String password, String photoUrl){
+        return name.length() > 5 && email.length() > 5 && password.length() > 8 && photoUrl.length() > 2;
+    }
+
+    public void selectedPhoto() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imagens", "*.jpg", "*.png", "*.jpeg"));
         File file = fileChooser.showOpenDialog(new Stage());

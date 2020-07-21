@@ -6,7 +6,6 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
-import dao.CompanyDao;
 import dao.PersonDao;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -22,9 +21,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import model.Company;
 import model.Person;
-import util.PrincipalCloseOpen;
+import util.refator.Navigator;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -90,7 +88,7 @@ public class ListedPersonController implements Initializable {
             initTable();
             btnSair.setOnMouseClicked((MouseEvent e) -> {
                 closed();
-                PrincipalCloseOpen.openMain();
+                Navigator.openMain();
             });
 
             btnDel.setOnMouseClicked((MouseEvent e) -> {
@@ -193,35 +191,10 @@ public class ListedPersonController implements Initializable {
             lbNome.setText(selected.getName());
             lbEmail.setText(selected.getEmail());
         } else {
-            imgView.setImage(new Image("/resources/image/boneco.png"));
+            imgView.setImage(new Image("/resources/image/insertPicture.png"));
             lbId.setText("");
             lbNome.setText("");
             lbEmail.setText("");
-        }
-    }
-
-    public void generatePdf(){
-        Document document = new Document();
-        try {
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF", "*.pdf"));
-            File file = fileChooser.showOpenDialog(new Stage());
-            PdfWriter.getInstance(document, new FileOutputStream(file.getAbsolutePath()));
-            document.open();
-            List<Person> personList = new PersonDao().findAll();
-            for (Person person : personList) {
-                document.add(new Paragraph("Id: " + person.getId()));
-                document.add(new Paragraph("Nome: " + person.getName()));
-                document.add(new Paragraph("Email: " + person.getEmail()));
-                document.add(new Paragraph("Caminho da foto: " + person.getPhoto()));
-                document.add(new Paragraph("                                                 "));
-            }
-            document.close();
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText("PDF Gerado com sucesso.");
-            alert.showAndWait();
-        } catch (DocumentException | IOException e){
-            e.printStackTrace();
         }
     }
 
@@ -234,4 +207,37 @@ public class ListedPersonController implements Initializable {
         }
         return persons;
     }
+
+    public void generatePdf() {
+        Document document = new Document();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF", "*.pdf"));
+        File file = fileChooser.showSaveDialog(new Stage());
+        if (file != null){
+            try {
+                PdfWriter.getInstance(document, new FileOutputStream(file.getAbsolutePath()));
+                document.open();
+                List<Person> personList = new PersonDao().findAll();
+                for (Person person : personList) {
+                    document.add(new Paragraph("Id: " + person.getId()));
+                    document.add(new Paragraph("Nome: " + person.getName()));
+                    document.add(new Paragraph("Email: " + person.getEmail()));
+                    document.add(new Paragraph("Caminho da foto: " + person.getPhoto()));
+                    document.add(new Paragraph("                                                 "));
+                }
+                document.close();
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setHeaderText("PDF Gerado com sucesso.");
+                alert.showAndWait();
+            } catch (DocumentException | IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Error");
+            alert.showAndWait();
+        }
+    }
+
 }
+

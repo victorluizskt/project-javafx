@@ -48,6 +48,7 @@ public class UpdatePersonController implements Initializable {
 
     private String urlPicture;
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btCancel.setOnMouseClicked((MouseEvent e) -> {

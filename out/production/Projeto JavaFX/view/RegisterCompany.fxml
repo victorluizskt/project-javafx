@@ -30,12 +30,12 @@
          <font>
             <Font name="Manjari Bold" size="13.0" />
          </font></Button>
-      <ImageView fx:id="imgPhoto" fitHeight="132.0" fitWidth="173.0" layoutX="167.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgPhoto" fitHeight="132.0" fitWidth="173.0" layoutX="120.0" layoutY="14.0" pickOnBounds="true">
          <image>
             <Image url="@../resources/image/company.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="269.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="255.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/image/sinalMais.png" />
          </image>

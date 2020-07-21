@@ -1,8 +1,6 @@
 package controllers;
 
 import application.*;
-import dao.CompanyDao;
-import dao.PersonDao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -11,7 +9,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import util.PrincipalCloseOpen;
+import util.refator.Navigator;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -122,7 +120,7 @@ public class PrincipalController implements Initializable {
     public void findAllPerson(){
         ListPerson p = new ListPerson();
        try{
-           PrincipalCloseOpen.closed();
+           Navigator.closed();
            p.start(new Stage());
        } catch (Exception e){
            e.printStackTrace();
@@ -132,7 +130,7 @@ public class PrincipalController implements Initializable {
     public void findAllCompany(){
         ListCompany p = new ListCompany();
         try{
-            PrincipalCloseOpen.closed();
+            Navigator.closed();
             p.start(new Stage());
         } catch (Exception e){
             e.printStackTrace();

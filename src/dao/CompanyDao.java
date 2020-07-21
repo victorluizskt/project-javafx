@@ -3,8 +3,6 @@ package dao;
 import jdbc.DB;
 import jdbc.DbException;
 import model.Company;
-import model.Person;
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;

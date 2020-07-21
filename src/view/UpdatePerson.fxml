@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdatePersonController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="423.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdatePersonController">
     <children>
         <Label layoutX="37.0" layoutY="237.0" prefHeight="31.0" prefWidth="52.0" text="Nome">
             <font>
@@ -30,7 +30,7 @@
         <TextField fx:id="txEmail" layoutX="96.0" layoutY="279.0" prefHeight="25.0" prefWidth="275.0" promptText="Insira seu email ..." />
         <PasswordField fx:id="psPassword" layoutX="96.0" layoutY="316.0" prefHeight="25.0" prefWidth="275.0" promptText="Insira sua senha ..." />
       <PasswordField fx:id="psPasswordConfirm" layoutX="96.0" layoutY="353.0" prefHeight="25.0" prefWidth="275.0" promptText="Confirme sua senha ..." />
-        <Button fx:id="btUpdate" layoutX="125.0" layoutY="408.0" mnemonicParsing="false" style="-fx-background-color: #B0E0E6;" text="Update">
+        <Button fx:id="btUpdate" layoutX="125.0" layoutY="408.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Update">
          <font>
             <Font name="Manjari Bold" size="13.0" />
          </font></Button>
@@ -43,7 +43,10 @@
             <Image url="@../resources/image/boneco.png" />
          </image>
       </ImageView>
-      <Label layoutX="36.0" layoutY="204.0" text="ID " />
+      <Label layoutX="38.0" layoutY="204.0" text="ID ">
+         <font>
+            <Font name="Manjari Bold" size="16.0" />
+         </font></Label>
       <Label fx:id="lbId" layoutX="96.0" layoutY="204.0" />
     </children>
 </AnchorPane>

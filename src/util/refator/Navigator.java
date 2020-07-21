@@ -1,10 +1,10 @@
-package util;
+package util.refator;
 
 import application.Principal;
 import application.RegisterCompany;
 import javafx.stage.Stage;
 
-public class PrincipalCloseOpen {
+public class Navigator {
 
     public static void closed(){
         Principal.getStage().close();
