@@ -2,8 +2,18 @@
   <dictionary name="victor">
     <words>
       <w>abre</w>
+      <w>adicionar</w>
+      <w>apenas</w>
+      <w>arquivo</w>
+      <w>atualizada</w>
+      <w>atualizado</w>
       <w>banc</w>
       <w>banco</w>
+      <w>boneco</w>
+      <w>cadastrada</w>
+      <w>cadastrado</w>
+      <w>cadrasct</w>
+      <w>caminho</w>
       <w>carrega</w>
       <w>cena</w>
       <w>classe</w>
@@ -13,16 +23,36 @@
       <w>conexões</w>
       <w>dados</w>
       <w>dburl</w>
+      <w>diferentes</w>
+      <w>documentos</w>
+      <w>empresa</w>
       <w>entre</w>
+      <w>extensão</w>
       <w>fabricar</w>
       <w>fecha</w>
+      <w>filtrar</w>
+      <w>foto</w>
+      <w>gerado</w>
+      <w>gerador</w>
+      <w>imagens</w>
+      <w>iniciando</w>
       <w>luiz</w>
       <w>mailza</w>
+      <w>pessoas</w>
+      <w>qualquer</w>
       <w>responsável</w>
       <w>revisaobd</w>
+      <w>sair</w>
       <w>senha</w>
+      <w>senhas</w>
+      <w>significa</w>
+      <w>sucesso</w>
+      <w>tabela</w>
       <w>teste</w>
+      <w>usuário</w>
+      <w>valores</w>
       <w>verteiros</w>
+      <w>whatsapp</w>
     </words>
   </dictionary>
 </component>

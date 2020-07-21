@@ -7,42 +7,87 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PrincipalController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="193.0">
-         <children>
-            <Button fx:id="btCadrasctPerson" mnemonicParsing="false" prefHeight="104.0" prefWidth="195.0" text="      Register Person">
-               <font>
-                  <Font name="Manjari Bold" size="13.0" />
-               </font></Button>
-            <Button fx:id="btRegisterCompany" layoutY="104.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="195.0" text="          Register Company">
-               <font>
-                  <Font name="Manjari Bold" size="13.0" />
-               </font></Button>
-            <Button fx:id="btListPerson" layoutY="200.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="195.0" text=" List Person's">
-               <font>
-                  <Font name="Manjari Bold" size="13.0" />
-               </font></Button>
-            <Button fx:id="btListCompany" layoutY="304.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="195.0" text="      List Company's">
-               <font>
-                  <Font name="Manjari Bold" size="13.0" />
-               </font></Button>
-            <AnchorPane prefHeight="400.0" prefWidth="54.0" style="-fx-background-color: #a9aaab;">
-               <effect>
-                  <DropShadow color="#a9aaab" />
-               </effect>
-            </AnchorPane>
-         </children>
+      <AnchorPane prefHeight="400.0" prefWidth="172.0" style="-fx-background-color: #0000;">
          <effect>
             <DropShadow />
          </effect>
-      </AnchorPane>
-      <AnchorPane layoutX="193.0" prefHeight="400.0" prefWidth="407.0">
          <children>
-            <ImageView fitHeight="249.0" fitWidth="275.0" layoutX="70.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btCadrasctPerson" layoutX="38.0" layoutY="93.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #02bfd4;" text="Register Person" underline="true">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btRegisterCompany" layoutX="37.0" layoutY="141.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #02bfd4;" text="Register Company" underline="true">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btListPerson" layoutX="37.0" layoutY="189.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #02bfd4;" text="List Person's" underline="true">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btListCompany" layoutX="37.0" layoutY="238.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #02bfd4;" text="List Company's" underline="true">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font></Button>
+            <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="45.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="45.0" layoutX="37.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/image/Login.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="37.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/image/company.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="37.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/image/List.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="37.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/image/List.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="71.0" fitWidth="98.0" layoutX="81.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../resources/image/ManaLight.png" />
-               </image></ImageView>
+                  <Image url="@../resources/image/MainMenu.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnHelp" layoutX="37.0" layoutY="289.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #02bfd4;" text="Help" underline="true">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnOmbudsman" layoutX="37.0" layoutY="338.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #02bfd4;" text="Ombudsman" underline="true">
+               <font>
+                  <Font name="Manjari Bold" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="40.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/image/help.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="40.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/image/Ombudsman.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="196.0" prefHeight="400.0" prefWidth="407.0">
+         <children>
+            <ImageView fitHeight="311.0" fitWidth="375.0" layoutX="36.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/image/Equipe.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
