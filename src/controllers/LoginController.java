@@ -11,9 +11,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Person;
-
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -31,15 +33,32 @@ public class LoginController implements Initializable {
     @FXML
     private CheckBox chBoxRemember;
 
+    private String user;
+
+    private String password;
+
+    private Path path = Paths.get("remember.txt");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        chBoxRemember.setOnMouseClicked((MouseEvent e) -> {
-            System.out.println("Estou aqui");
-        });
-
+        try {
+            if(!returnRead()){
+                write();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         btnLogin.setOnMouseClicked((MouseEvent e) ->{
             try {
+                if(chBoxRemember.isSelected()){
+                    user = txtUser.getText();
+                    password = txtPassword.getText();
+                    read(user, password);
+                } else {
+                    user = null;
+                    password= null;
+                    read(null, null);
+                }
                 logIn();
             } catch (IOException ioException) {
                 ioException.printStackTrace();
@@ -105,4 +124,36 @@ public class LoginController implements Initializable {
 
         }
     }
+
+    public void read(String user, String password) throws IOException {
+        if(user != null && password != null) {
+            String vetUse = (user + " " + password);
+            byte[] userBytes = vetUse.getBytes();
+            Files.write(path, userBytes);
+        } else {
+            String vetUse = " ";
+            byte[] userBytes = vetUse.getBytes();
+            Files.write(path, userBytes);
+        }
+    }
+
+    public void write() throws IOException {
+        byte[] users = Files.readAllBytes(path);
+        String read = new String(users);
+        String[] salve = read.split(" ");
+        if(returnRead()){
+            System.out.println("Vaz");
+        } else {
+            txtUser.setText(salve[0]);
+            txtPassword.setText(salve[1]);
+        }
+    }
+
+    public boolean returnRead() throws IOException {
+        byte[] users = Files.readAllBytes(path);
+        String read = new String(users);
+        return read.equals(" ");
+    }
+
 }
+
