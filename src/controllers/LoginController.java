@@ -2,6 +2,7 @@ package controllers;
 
 import application.Main;
 import application.Principal;
+import application.SendEmail;
 import dao.PersonDao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,6 +34,9 @@ public class LoginController implements Initializable {
     @FXML
     private CheckBox chBoxRemember;
 
+    @FXML
+    private Button btnForgotEmail;
+
     private String user;
 
     private String password;
@@ -63,6 +67,10 @@ public class LoginController implements Initializable {
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
+        });
+
+        btnForgotEmail.setOnMouseClicked((MouseEvent e) -> {
+            initializeSendEmail();
         });
 
         btnLogin.setOnKeyPressed((KeyEvent e) ->{
@@ -141,9 +149,7 @@ public class LoginController implements Initializable {
         byte[] users = Files.readAllBytes(path);
         String read = new String(users);
         String[] salve = read.split(" ");
-        if(returnRead()){
-            System.out.println("Vaz");
-        } else {
+        if(!returnRead()){
             txtUser.setText(salve[0]);
             txtPassword.setText(salve[1]);
         }
@@ -153,6 +159,15 @@ public class LoginController implements Initializable {
         byte[] users = Files.readAllBytes(path);
         String read = new String(users);
         return read.equals(" ");
+    }
+
+    public void initializeSendEmail(){
+        SendEmail sendEmail = new SendEmail();
+        try{
+            sendEmail.start(new Stage());
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }

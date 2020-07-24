@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -35,10 +34,6 @@
                   <Font name="Manjari Bold" size="13.0" />
                </font>
             </CheckBox>
-            <Label layoutX="106.0" layoutY="171.0" prefHeight="16.0" prefWidth="193.0" text="Forgot your password?" textFill="#02bfd4" underline="true">
-               <font>
-                  <Font name="Manjari Bold" size="13.0" />
-               </font></Label>
             <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="69.0" layoutY="37.0" pickOnBounds="true">
                <image>
                   <Image url="/resources/image/Login.png" />
@@ -56,5 +51,6 @@
             <Image url="@../resources/image/Pessoas.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnForgotEmail" layoutX="303.0" layoutY="360.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #9dd9e8;" text="Forgot your password?" underline="true" />
    </children>
 </AnchorPane>

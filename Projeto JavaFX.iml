@@ -11,5 +11,7 @@
     <orderEntry type="library" name="mysql-connector-java_8.0.20-1ubuntu18" level="project" />
     <orderEntry type="library" name="JavaFoeniX" level="project" />
     <orderEntry type="library" name="itextpdf-5.0.6" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="mail" level="project" />
   </component>
 </module>
