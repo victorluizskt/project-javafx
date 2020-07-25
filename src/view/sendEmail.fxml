@@ -3,13 +3,31 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0" prefWidth="262.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SendEmailController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="313.0" style="-fx-background-color: #9dd9e8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SendEmailController">
    <children>
-      <TextField fx:id="textFieldEmail" layoutX="19.0" layoutY="36.0" prefHeight="26.0" prefWidth="225.0" promptText="Your email..." />
-      <TextField fx:id="textFieldEmailConfirm" layoutX="18.0" layoutY="72.0" prefHeight="26.0" prefWidth="225.0" promptText="Confirm your email..." />
-      <Button fx:id="btnSendEmail" layoutX="173.0" layoutY="106.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Send" />
-      <TextField fx:id="txtNumber" layoutX="20.0" layoutY="149.0" prefHeight="26.0" prefWidth="225.0" promptText="Number" />
-      <Button fx:id="btnSetValue" layoutX="173.0" layoutY="184.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Send" />
+      <TextField fx:id="textFieldEmail" layoutX="19.0" layoutY="30.0" prefHeight="26.0" prefWidth="262.0" promptText="Your email...">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="textFieldEmailConfirm" layoutX="18.0" layoutY="71.0" prefHeight="26.0" prefWidth="262.0" promptText="Confirm your email...">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></TextField>
+      <Button fx:id="btnSendEmail" layoutX="105.0" layoutY="117.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Send email" />
+      <TextField fx:id="txtNumber" layoutX="19.0" layoutY="159.0" prefHeight="26.0" prefWidth="262.0" promptText="Confirmation number">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></TextField>
+      <Button fx:id="btnSetValue" layoutX="124.0" layoutY="198.0" mnemonicParsing="false" style="-fx-background-color: #02bfd4;" text="Send">
+         <font>
+            <Font name="Manjari Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnHelp" layoutX="246.0" layoutY="226.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #9dd9e8;" text="Help?" textFill="#f50000" underline="true">
+         <font>
+            <Font name="Manjari Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

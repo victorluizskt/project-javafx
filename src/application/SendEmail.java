@@ -16,7 +16,7 @@ public class SendEmail extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/sendEmail.fxml")); // Carrega o FXML
             Scene scene = new Scene(root); // Coloca o FXML em uma cena
-            stage.setTitle("Forgot your email");
+            stage.setTitle("Itooks recovery");
             stage.setScene(scene); // Coloca a cena em uma janela
             stage.setResizable(false);
             stage.show();  // Carrega a janela2

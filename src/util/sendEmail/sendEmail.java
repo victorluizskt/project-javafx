@@ -33,8 +33,8 @@ public class sendEmail {
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
 
-                        return new PasswordAuthentication("victorluizcefet@gmail.com",
-                                "familias2!");//email e senha usuário
+                        return new PasswordAuthentication("itookscompany@gmail.com",
+                                "itooks123");//email e senha usuário
                     }
                 });
 
@@ -51,7 +51,10 @@ public class sendEmail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress("victorluizcefet@gmail.com"));
 
             message.setSubject("Recover Itooks password");
-            message.setContent("Hello, to recover your password enter this code " + value +
+            message.setContent("Hello, we appreciate the contact on behalf of our company Itooks Company!\n" +
+                            "To change the password of your original registration, just enter the code: " + value +
+                            "to recover your password and change it." +
+                            "Yours sincerely Itooks Company! " +
                             " in the password recovery box.",
                     "text/html; charset=utf-8");
 
